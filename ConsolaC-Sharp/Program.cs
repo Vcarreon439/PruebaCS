@@ -21,11 +21,11 @@ namespace ConsolaC_Sharp
         // Dos métodos estáticos para mostrar el saludo
         public static string Saludo()
         {
-            return "Saludo desde la librería de C#";
+            return "Saludo desde la librería de C# {Consola}";
         }
         public static string Saludo(string nombre)
         {
-            return "Hola " + nombre + ", desde la librería de C#";
+            return "Hola " + nombre + ", desde la librería de C# {Consola}";
         }
 
         // Propiedad de solo lectura para mostrar la versión
@@ -37,7 +37,7 @@ namespace ConsolaC_Sharp
                 Assembly ensamblado = Assembly.GetExecutingAssembly();
                 FileVersionInfo fvi =
                 FileVersionInfo.GetVersionInfo(ensamblado.Location);
-                return fvi.FileVersion;
+                return fvi.FileVersion + "{Consola}";
             }
         }
     }
